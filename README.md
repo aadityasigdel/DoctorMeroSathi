@@ -3,46 +3,37 @@ DoctorMeroSathi is a simple web application that helps users find doctors and bo
 
 Features
 Responsive and user-friendly interface
-
 List of doctors with specializations
-
 Appointment booking system
-
 Basic session handling
-
 Built with Java Servlets, JSP, HTML, and CSS
 
 Requirements
 JDK 8 or higher
-
 Apache Maven
-
 Apache Tomcat or other servlet container
-
 Web browser
 
 
-
-http://localhost:8080/DoctorMeroSathi
 Project Structure
-
 src/
 ├── main/
 │   ├── java/         
 │   └── webapp/      
 │       └── WEB-INF/ 
+
+
 Team Members
 Aditya Sigdel (Team Leader)
-
 Utsab Lama (Tamang)
-
 Ankit Baral
-
 Ashnab Pokharel
-
 Rabindra Aryal
 
 Contact
+
 📧 Aditya Sigdel
+
 Email: aadityasigdel.dev@gmail.com
+
 GitHub: aadityasigdel
