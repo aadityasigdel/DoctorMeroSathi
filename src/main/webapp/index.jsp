@@ -18,8 +18,8 @@
         <p class="logo-text">DoctorMeroSathi</p>
     </div>
     <div class="nav-Links">
-        <a href="/DoctorMeroSathi_war_exploded/view/login.jsp" class="nav-link login-btn">Login</a>
-        <a href="/DoctorMeroSathi_war_exploded/view/signup.jsp" class="nav-link login-btn">Sign Up</a>
+        <a href="/DoctorMeroSathi_war_exploded/WEB-INF/view/login.jsp" class="nav-link login-btn">Login</a>
+        <a href="../java/controller/LoginServlet" class="nav-link login-btn">Sign Up</a>
     </div>
 </nav>
 
@@ -63,7 +63,8 @@
 <!-- About Section -->
 <section class="about">
     <h2 class="about-title">About Us</h2>
-    <p class="about-text">We are dedicated to providing top-notch healthcare services with experienced professionals who care about your well-being.</p>
+    <p class="about-text">We are dedicated to providing top-notch healthcare services with experienced professionals who
+        care about your well-being.</p>
 </section>
 
 <!-- Footer -->
