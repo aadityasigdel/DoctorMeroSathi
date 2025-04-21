@@ -119,4 +119,5 @@ public class UsersModel {
     public void setCreatedAt(java.sql.Timestamp createdAt) {
         this.createdAt = createdAt;
     }
+
 }

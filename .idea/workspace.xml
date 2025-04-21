@@ -9,36 +9,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d486dd19-080c-4e4f-838e-9771e5ebf7f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/Util/DbConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/Util/PasswordHashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/DoctorSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/UsersModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d486dd19-080c-4e4f-838e-9771e5ebf7f4" name="Changes" comment="3rd push">
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AboutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AdmindashServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentRedirectServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/DoctorListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ProfileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentmgrServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/bookApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/editProfileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/logoutservlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/usersMgrServet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/userdao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/Authservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/AdminNav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/Profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/adminDash.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/adminUsrMrg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/edit-profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/navigation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AboutUs.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AdminNav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admindash.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDash.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookApp.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Editprofile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/appointmentmgr.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/doctorList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/logout.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usersMgr.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/DoctorLogin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/DoctorSignup.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/catalina.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/catalina.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/jaspic-providers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/jaspic-providers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/jaspic-providers.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/jaspic-providers.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/tomcat-users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/tomcat-users.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/tomcat-users.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.smarttomcat/DoctorMeroSathi/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/UsersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/UsersModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/login.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +71,12 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -68,6 +91,9 @@
     &quot;accountId&quot;: &quot;b93184be-a508-4de3-8c1d-d0bb3a1c9ec0&quot;
   }
 }</component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Editprofile.jsp" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -107,6 +133,8 @@
     &quot;Tomcat Server.Tomcat 11.0.0-M22.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/drive/OneDrive/Desktop/CourseWork/DoctorMeroSathi/src/main/webapp/assets&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -122,7 +150,12 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\drive\OneDrive\Desktop\CourseWork\DoctorMeroSathi\src\main\webapp\assets" />
+      <recent name="D:\drive\OneDrive\Desktop\CourseWork\DoctorMeroSathi\src\main\webapp\WEB-INF\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\drive\OneDrive\Desktop\CourseWork\DoctorMeroSathi\src\main\webapp\assets" />
       <recent name="D:\drive\OneDrive\Desktop\CourseWork\DoctorMeroSathi\src\main\webapp\WEB-INF" />
     </key>
   </component>
@@ -143,6 +176,24 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61059" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -187,10 +238,45 @@
       <workItem from="1744629694378" duration="2519000" />
       <workItem from="1744686175437" duration="1930000" />
       <workItem from="1744769206791" duration="81000" />
+      <workItem from="1744857824354" duration="547000" />
+      <workItem from="1744869003418" duration="1137000" />
+      <workItem from="1744886580054" duration="2809000" />
+      <workItem from="1744942903062" duration="393000" />
+      <workItem from="1744945911375" duration="1343000" />
+      <workItem from="1745071402597" duration="3050000" />
+      <workItem from="1745115076599" duration="194000" />
+      <workItem from="1745115781076" duration="4595000" />
+      <workItem from="1745125343650" duration="4000" />
+      <workItem from="1745131757413" duration="711000" />
+      <workItem from="1745201344618" duration="27672000" />
+      <workItem from="1745235725814" duration="202000" />
     </task>
+    <task id="LOCAL-00001" summary="2nd push">
+      <option name="closed" value="true" />
+      <created>1744857892263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744857892263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="3rd push">
+      <option name="closed" value="true" />
+      <created>1745214589046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745214589047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2nd push" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="3rd push" />
+    <option name="LAST_COMMIT_MESSAGE" value="3rd push" />
   </component>
 </project>

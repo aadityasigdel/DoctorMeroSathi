@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5F7FA; /* Light Gray */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-container {
+    background-color: #FFFFFF; /* Pure White */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    max-width: 950px; /* Adjust as needed */
+}
+
+.image-section {
+    flex: 0.4; /* Adjust ratio as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.image-placeholder {
+    border: 1px solid #CCD1D5; /* Slightly darker light gray */
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px; /* Adjust max width for image area */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-color: #F5F7FA; /* Light Gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #333333; /* Dark Charcoal */
+}
+
+.form-section {
+    flex: 0.5; /* Adjust ratio as needed */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo-area img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    color: #2A7F9D; /* Primary Blue */
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #333333; /* Dark Charcoal */
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px; /* Adjust spacing */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; /* Dark Charcoal */
+    font-size: 0.9rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="date"],
+.input-group input[type="number"],
+.input-group select {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #CCD1D5; /* Slightly darker light gray */
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    appearance: none; /* Remove default select arrow */
+}
+
+.input-group select {
+    padding-right: 30px; /* Make space for custom arrow if needed */
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 10px;
+    top: 68%;
+    transform: translateY(-50%);
+    color: #A9A9A9; /* Light gray for icons */
+    font-size: 1rem;
+}
+
+button.signup-button {
+    background-color: #FF8A7D; /* Warm Coral */
+    color: #FFFFFF; /* Pure White */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add some space above the button */
+}
+
+button.signup-button:hover {
+    background-color: #E67A6E; /* Slightly darker coral */
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333333; /* Dark Charcoal */
+}
+
+.login-link a {
+    color: #5DB4B8; /* Soft Teal */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

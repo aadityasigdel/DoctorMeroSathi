@@ -1,0 +1,117 @@
+/* Resetting margins, paddings, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sidebar container styles */
+.sidebar {
+    background-color: #2A7F9D; /* Primary Blue */
+    color: #FFFFFF; /* Pure White text */
+    width: 220px; /* Adjust width as needed */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Stay in place on scroll */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center logo */
+}
+
+
+
+
+/* Navigation list styles */
+nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0 20px;
+}
+
+nav ul li a {
+    display: block;
+    color: #FFFFFF;
+    padding: 12px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    background-color: #5DB4B8; /* Soft Teal on hover */
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo-area img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.logo-area span {
+    font-size: 1rem;
+
+}
+
+
+
+
+nav ul li.logout a {
+    background-color: #FF8A7D;
+    color: #FFFFFF;
+}
+
+nav ul li.logout a:hover {
+    background-color: #E67A6E;
+}
+
+/* Responsive adjustments (optional - for smaller screens) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0;
+        overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    }
+
+
+    nav ul {
+        display: flex;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        border-radius: 3px;
+        margin-bottom: 0;
+    }
+
+    nav ul li a i {
+        margin-right: 5px;
+    }
+}

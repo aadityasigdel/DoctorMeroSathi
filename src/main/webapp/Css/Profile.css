@@ -1,0 +1,173 @@
+:root {
+    --primary-blue: #2A7F9D;
+    --accent-coral: #FF8A7D;
+    --light-blue: #E1F0F5;
+    --dark-gray: #333333;
+    --medium-gray: #555555;
+    --light-gray: #f8f9fa;
+    --border-radius: 6px; /* Slightly less rounded */
+    --box-shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    --transition-default: all 0.2s ease-in-out;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px; /* Add some padding around the body */
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.profile-container {
+    max-width: 700px; /* Slightly narrower */
+    width: 100%;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    overflow: hidden;
+    margin-top: 40px; /* Add some top margin */
+    margin-bottom: 40px; /* Add some bottom margin */
+}
+
+.profile-header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 20px; /* Reduced padding */
+    text-align: left; /* Align title to the left */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 1.6rem; /* Slightly smaller title */
+    font-weight: 500; /* Lighter font weight */
+}
+
+.profile-content {
+    padding: 20px; /* Reduced padding */
+    display: grid;
+    grid-template-columns: auto 1fr; /* Grid layout */
+    gap: 20px;
+}
+
+.profile-picture-section {
+    text-align: center;
+    padding-top: 10px; /* Adjust top padding */
+}
+
+.profile-picture {
+    width: 120px; /* Smaller profile picture */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--light-blue);
+    margin-bottom: 15px; /* Reduced margin */
+    box-shadow: var(--box-shadow-light);
+}
+
+.no-picture {
+    width: 120px; /* Smaller no-picture area */
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Reduced margin */
+    color: var(--primary-blue);
+    font-size: 2rem; /* Smaller icon */
+}
+
+.profile-details {
+    /* No specific flex anymore */
+}
+
+.detail-card {
+    background-color: white; /* White background for cards */
+    border-radius: var(--border-radius);
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    border: 1px solid #ddd; /* Light border for cards */
+}
+
+.detail-card h3 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced margin */
+    padding-bottom: 8px; /* Reduced padding */
+    border-bottom: 2px solid var(--accent-coral);
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduced gap */
+    font-size: 1.1rem; /* Smaller heading */
+    font-weight: 600;
+}
+
+.detail-card h3 i {
+    color: var(--accent-coral);
+    font-size: 1rem; /* Smaller icon */
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* Grid for label and value */
+    gap: 8px;
+    margin-bottom: 8px; /* Reduced margin */
+    align-items: center; /* Align label and value vertically */
+}
+
+.detail-label {
+    font-weight: 500; /* Slightly lighter */
+    color: var(--medium-gray);
+    font-size: 0.9rem; /* Smaller label */
+}
+
+.detail-value {
+    font-size: 0.9rem; /* Smaller value */
+}
+
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Reduced gap */
+    padding: 8px 16px; /* Reduced padding */
+    background-color: var(--accent-coral);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.9rem; /* Smaller font */
+    transition: var(--transition-default);
+    text-decoration: none;
+    margin-top: 15px; /* Reduced margin */
+    box-shadow: var(--box-shadow-light);
+}
+
+.edit-btn:hover {
+    background-color: #E67A6E;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 138, 125, 0.2);
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+
+    .profile-picture-section {
+        text-align: center;
+    }
+
+    .detail-row {
+        grid-template-columns: 1fr; /* Stack label and value */
+        gap: 4px;
+    }
+
+    .detail-label {
+        font-weight: bold; /* Make label bold on smaller screens */
+    }
+}

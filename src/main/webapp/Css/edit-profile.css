@@ -1,0 +1,151 @@
+/* edit-profile.css */
+
+:root {
+    --primary-blue: #2A7F9D;
+    --accent-coral: #FF8A7D;
+    --light-blue: #E1F0F5;
+    --dark-gray: #333333;
+    --medium-gray: #555555;
+    --light-gray: #f8f9fa;
+    --border-radius: 8px;
+    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition-default: all 0.3s ease;
+    --primary-blue-rgb: 42, 127, 157;
+    --accent-coral-rgb: 255, 138, 125;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content {
+    margin-top: 70px; /* Adjust to match your navbar height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.edit-container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow-light);
+}
+
+h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.6rem; /* Slightly smaller heading */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+    width: calc(100% - 16px);
+    padding: 8px;
+    font-size: 0.95rem;
+    margin-top: 3px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-blue-rgb, 42, 127, 157), 0.25);
+}
+
+.form-group input[type="email"][readonly] {
+    background-color: #eee;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduced textarea height */
+}
+
+.form-group button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--accent-coral);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: var(--transition-default);
+    text-decoration: none;
+    margin-top: 15px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.form-group button:hover {
+    background-color: #E67A6E;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(var(--accent-coral-rgb, 255, 138, 125), 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .edit-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="file"],
+    .form-group button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}

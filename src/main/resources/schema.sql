@@ -11,7 +11,7 @@ CREATE TABLE users (
     full_name VARCHAR(100) NOT NULL, 
     phone VARCHAR(20), 
     gender ENUM('male', 'female', 'other'), 
-    profile_picture VARCHAR(255), 
+    profile_picture blob,
     address TEXT, 
     dob DATE, specialization VARCHAR(100), 
     experience_years INT, 
