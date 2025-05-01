@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,38 +20,30 @@
     <div class="stats-container">
         <div class="stat-card">
             <h3>Total Users</h3>
-            <div class="value">124</div>
+            <div class="value">${dashboardStats.totalUsers}</div>
             <p>Registered in system</p>
         </div>
         <div class="stat-card">
             <h3>Active Doctors</h3>
-            <div class="value">24</div>
+            <div class="value">${dashboardStats.activeDoctors}</div>
             <p>Available for appointments</p>
         </div>
         <div class="stat-card">
             <h3>Today's Appointments</h3>
-            <div class="value">18</div>
+            <div class="value">${dashboardStats.todaysAppointments}</div>
             <p>Scheduled for today</p>
         </div>
     </div>
 
-
-
     <!-- Recent Activity -->
     <h3 class="section-title">Recent Activity</h3>
     <div class="activity-log">
-        <div class="activity-item">
-            <span class="activity-time">10:30 AM</span>
-            <span class="activity-text">New patient registration - Sunita Sharma</span>
-        </div>
-        <div class="activity-item">
-            <span class="activity-time">9:15 AM</span>
-            <span class="activity-text">Appointment completed with Dr. Ram Prasad</span>
-        </div>
-        <div class="activity-item">
-            <span class="activity-time">Yesterday</span>
-            <span class="activity-text">3 new doctors added to the system</span>
-        </div>
+        <c:forEach items="${recentActivities}" var="activity">
+            <div class="activity-item">
+                <span class="activity-time">${activity.time}</span>
+                <span class="activity-text">${activity.description}</span>
+            </div>
+        </c:forEach>
     </div>
 </div>
 </body>

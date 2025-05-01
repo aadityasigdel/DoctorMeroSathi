@@ -10,6 +10,8 @@ import static org.example.doctormerosathi.services.Authservice.isAuthenticated;
 
 import java.io.IOException;
 
+
+//to redirect doctor and user to diff appointment page
 @WebServlet("/view-appointments")
 public class AppointmentRedirectServlet extends HttpServlet {
 
@@ -17,8 +19,8 @@ public class AppointmentRedirectServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+            // Redirect to login page if not authenticated
             if (!Authservice.isAuthenticated(request)) {
-                // Redirect to login page if not authenticated
                 response.sendRedirect(request.getContextPath() + "/login");
                 return;
             }
@@ -26,16 +28,15 @@ public class AppointmentRedirectServlet extends HttpServlet {
             // Get the current authenticated user from the session
             UsersModel user = Authservice.getCurrentUser(request);
 
-
+            //redirect to login page is user isn't log in
             if (user == null) {
-            // If user is not in the session, redirect to login page
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
 
-        // Check user role and redirect accordingly
+        // Check if  user is doctor or  not and redirect correct
         if ("doctor".equalsIgnoreCase(user.getRole())) {
-            response.sendRedirect(request.getContextPath() + "/appointmentsDash.jsp");
+            response.sendRedirect(request.getContextPath() + "/appointmentsDoc");
         } else {
             response.sendRedirect(request.getContextPath() + "/appointmentsCli");
         }

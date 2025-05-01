@@ -1,31 +1,15 @@
-/* edit-profile.css */
-
-:root {
-    --primary-blue: #2A7F9D;
-    --accent-coral: #FF8A7D;
-    --light-blue: #E1F0F5;
-    --dark-gray: #333333;
-    --medium-gray: #555555;
-    --light-gray: #f8f9fa;
-    --border-radius: 8px;
-    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --transition-default: all 0.3s ease;
-    --primary-blue-rgb: 42, 127, 157;
-    --accent-coral-rgb: 255, 138, 125;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
+    background-color: #f8f9fa;
+    color: #333333;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .main-content {
-    margin-top: 70px; /* Adjust to match your navbar height */
+    margin-top: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,17 +22,17 @@ body {
     width: 100%;
     background: white;
     padding: 20px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     border: 1px solid #ddd;
-    box-shadow: var(--box-shadow-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-    color: var(--primary-blue);
+    color: #2A7F9D;
     margin-bottom: 20px;
     text-align: center;
     font-weight: 500;
-    font-size: 1.6rem; /* Slightly smaller heading */
+    font-size: 1.6rem;
 }
 
 .form-group {
@@ -59,7 +43,7 @@ h2 {
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
-    color: var(--medium-gray);
+    color: #555555;
     font-size: 0.95rem;
     line-height: 1.2;
 }
@@ -75,7 +59,7 @@ h2 {
     padding: 8px;
     font-size: 0.95rem;
     margin-top: 3px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -84,9 +68,9 @@ h2 {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: var(--primary-blue);
+    border-color: #2A7F9D;
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(var(--primary-blue-rgb, 42, 127, 157), 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(42, 127, 157, 0.25);
 }
 
 .form-group input[type="email"][readonly] {
@@ -97,7 +81,7 @@ h2 {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 80px; /* Reduced textarea height */
+    min-height: 80px;
 }
 
 .form-group button {
@@ -106,25 +90,24 @@ h2 {
     justify-content: center;
     gap: 8px;
     padding: 8px 16px;
-    background-color: var(--accent-coral);
+    background-color: #FF8A7D;
     color: white;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     cursor: pointer;
     font-size: 0.95rem;
-    transition: var(--transition-default);
+    transition: all 0.3s ease;
     text-decoration: none;
     margin-top: 15px;
-    box-shadow: var(--box-shadow-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .form-group button:hover {
     background-color: #E67A6E;
     transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(var(--accent-coral-rgb, 255, 138, 125), 0.3);
+    box-shadow: 0 3px 8px rgba(255, 138, 125, 0.3);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .edit-container {
         padding: 15px;

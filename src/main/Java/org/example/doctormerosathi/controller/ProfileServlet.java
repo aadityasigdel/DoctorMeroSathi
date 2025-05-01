@@ -11,6 +11,8 @@ import org.example.doctormerosathi.services.Authservice;
 import java.io.IOException;
 import java.sql.*;
 
+
+// to display user profile
 @WebServlet("/profile")
 public class ProfileServlet extends HttpServlet {
 
@@ -19,21 +21,21 @@ public class ProfileServlet extends HttpServlet {
             throws ServletException, IOException {
 
         if (!Authservice.isAuthenticated(request)) {
-            // Redirect to login page if not authenticated
+            // Redirect to login page
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
 
-        // Get the current authenticated user from the session
+        // Get the current session
         UsersModel user = Authservice.getCurrentUser(request);
 
         if (user == null) {
-            // If no user found, redirect to login
+            //  redirect to login
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
 
-        // Check for ?edit=true parameter for editing profile
+        // for editing profile
         String editParam = request.getParameter("edit");
         boolean isEdit = "true".equalsIgnoreCase(editParam);
 
@@ -70,7 +72,7 @@ public class ProfileServlet extends HttpServlet {
             }
         }
 
-        // Set user data as a request attribute to display in JSP
+        // user data  to display
         request.setAttribute("user", user);
 
         // Forward to the appropriate page based on the "edit" parameter

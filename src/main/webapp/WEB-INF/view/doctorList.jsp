@@ -3,8 +3,8 @@
   User: acer
   Date: 4/21/2025
   Time: 9:14 AM
-  To change this template use File | Settings | File Templates.
---%><%@ page contentType="text/html;charset=UTF-8" language="java" %>
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.doctormerosathi.model.UsersModel" %>
 <!DOCTYPE html>
@@ -53,13 +53,13 @@
         }
 
         /* Search form */
-        form {
+        .search-form {
             display: flex;
             margin-bottom: 20px;
             justify-content: center;
         }
 
-        form input[type="text"] {
+        .search-form input[type="text"] {
             flex-grow: 1;
             padding: 10px;
             border: 1px solid #D3DCE0;
@@ -68,7 +68,7 @@
             color: #333333;
         }
 
-        form a {
+        .search-form button {
             background-color: #FF8A7D;
             color: #FFFFFF;
             border: none;
@@ -79,7 +79,7 @@
             transition: background-color 0.3s ease;
         }
 
-        form a:hover {
+        .search-form button:hover {
             background-color: #E67A6E;
         }
 
@@ -112,7 +112,6 @@
             background-color: #D3E8E6;
             border-radius: 50%;
             margin-right: 20px;
-            background-image: url('path-to-placeholder-image.jpg'); /* Add placeholder image */
             background-size: cover;
             background-position: center;
         }
@@ -123,13 +122,17 @@
             color: #333333;
         }
 
-        .doctor-info div div:last-child {
+        .doctor-specialization {
             color: #2A7F9D;
             font-size: 0.9rem;
         }
 
-        .actions button {
-            margin-left: 10px;
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
             border: none;
             padding: 8px 12px;
             border-radius: 5px;
@@ -137,26 +140,28 @@
             font-size: 0.9rem;
             transition: background-color 0.3s ease;
             color: #FFFFFF;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .actions button:first-child {
+        .btn-profile {
             background-color: #5DB4B8;
         }
 
-        .actions button:first-child:hover {
+        .btn-profile:hover {
             background-color: #4CA3A7;
         }
 
-        .actions button:last-child {
+        .btn-book {
             background-color: #FF8A7D;
         }
 
-        .actions button:last-child:hover {
+        .btn-book:hover {
             background-color: #E67A6E;
         }
 
         /* "See More" button */
-        .container > button {
+        .see-more {
             background-color: #5DB4B8;
             color: #FFFFFF;
             border: none;
@@ -169,7 +174,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .container > button:hover {
+        .see-more:hover {
             background-color: #4CA3A7;
         }
     </style>
@@ -178,9 +183,9 @@
 <%@ include file="/WEB-INF/view/navbar.jsp" %>
 
 <div class="container">
-    <form>
+    <form class="search-form">
         <input type="text" placeholder="Search doctors..." name="search">
-        <a href="#">Search</a>
+        <button type="submit">Search</button>
     </form>
 
     <%
@@ -192,22 +197,22 @@
             <div class="avatar"></div>
             <div>
                 <div class="doctor-name">Dr. <%= doctor.getFullName() %></div>
-                <div><%= doctor.getSpecialization() != null ? doctor.getSpecialization() : "General" %></div>
+                <div class="doctor-specialization">
+                    <%= doctor.getSpecialization() != null ? doctor.getSpecialization() : "General Practitioner" %>
+                </div>
             </div>
         </div>
         <div class="actions">
             <form action="doctor-profile" method="get" style="display:inline;">
                 <input type="hidden" name="id" value="<%= doctor.getId() %>">
-                <button type="submit">View Profile</button>
+                <button type="submit" class="btn btn-profile">View Profile</button>
             </form>
-            <form action="book-appointment" method="get" style="display:inline;">
-                <button type="submit">Book Appointment</button>
-            </form>
+            <a href="${pageContext.request.contextPath}/BookApp?doctorId=<%= doctor.getId() %>" class="btn btn-book">Book Appointment</a>
         </div>
     </div>
     <% } %>
 
-    <button>See More</button>
+    <button class="see-more">See More Doctors</button>
 </div>
 
 </body>

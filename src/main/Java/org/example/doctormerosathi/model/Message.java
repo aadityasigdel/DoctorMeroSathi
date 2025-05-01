@@ -1,5 +1,7 @@
 package org.example.doctormerosathi.model;
 
+import java.text.SimpleDateFormat;
+
 public class Message {
     private int id;
     private int senderId;
@@ -47,4 +49,11 @@ public class Message {
         this.createdAt = createdAt;
     }
 
+    public String getTimestamp() {
+        if (createdAt != null) {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return sdf.format(createdAt);
+        }
+        return null;
+    }
 }

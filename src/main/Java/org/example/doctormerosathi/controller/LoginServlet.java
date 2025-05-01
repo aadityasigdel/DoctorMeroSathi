@@ -7,16 +7,24 @@ import org.example.doctormerosathi.model.UsersModel;
 import org.example.doctormerosathi.services.Authservice;
 import org.example.doctormerosathi.Util.PasswordHashUtil;
 import org.example.doctormerosathi.Util.DbConnectionUtil;
-
 import java.io.IOException;
 import java.sql.*;
 
+//to verify login credential and redirect to diff pages according to user role
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        // For logged in
+        if (Authservice.isAuthenticated(request)) {
+            response.sendRedirect(request.getContextPath() + "/home");
+            return;
+        }
+
+        // Redirection to login if no session available
         request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
     }
 
@@ -32,7 +40,6 @@ public class LoginServlet extends HttpServlet {
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            // Set parameters for the SQL query
             stmt.setString(1, email);
 
             try (ResultSet rs = stmt.executeQuery()) {
@@ -41,45 +48,39 @@ public class LoginServlet extends HttpServlet {
                     String storedHash = rs.getString("password");
 
                     if (PasswordHashUtil.verifyPassword(password, storedHash)) {
-                        // If login is successful, create a UsersModel object and use Authservice to create session
                         UsersModel user = new UsersModel();
                         user.setId(rs.getInt("user_id"));
                         user.setFullName(rs.getString("full_name"));
                         user.setRole(rs.getString("role"));
 
+                        Authservice.createUserSession(request, user, 30 * 60); // 30 min
 
-                        Authservice.createUserSession(request, user, 30 * 60); // 30 minutes timeout
-
-
-                        String role = user.getRole();
-
-                        if ("admin".equals(role)) {
-                            response.sendRedirect(request.getContextPath()+"/admin/dashboard");
-
-                        }
-                        else {
+                        // Redirect based on role
+                        if ("admin".equals(user.getRole())) {
+                            response.sendRedirect(request.getContextPath() + "/admin/dashboard");
+                        } else {
                             response.sendRedirect(request.getContextPath() + "/home");
                         }
+                        return;
 
                     } else {
-                        // Invalid password
                         request.setAttribute("error", "Invalid email or password.");
-                        request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
                     }
+
                 } else {
-                    // Email not found
                     request.setAttribute("error", "Invalid email or password.");
-                    request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
                 }
+
+                request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
 
             } catch (SQLException e) {
                 e.printStackTrace();
                 request.setAttribute("error", "Database error: " + e.getMessage());
                 request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle any other exception that may occur
             request.setAttribute("error", "Server error: " + e.getMessage());
             request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
         }

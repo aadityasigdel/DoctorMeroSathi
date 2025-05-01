@@ -5,9 +5,10 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.example.doctormerosathi.Util.PasswordHashUtil;
 import org.example.doctormerosathi.Util.DbConnectionUtil;
-
 import java.io.IOException;
 import java.sql.*;
+
+//To receive valid user information and  store the information in the database
 @WebServlet(name = "signup", value = "/signup")
 public class RegisterServlet extends HttpServlet {
 
@@ -46,7 +47,7 @@ public class RegisterServlet extends HttpServlet {
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            // Set parameters for the SQL query
+
             stmt.setString(1, email);
             stmt.setString(2, hashedPassword);
             stmt.setString(3, role);
@@ -54,10 +55,10 @@ public class RegisterServlet extends HttpServlet {
             stmt.setString(5, phone);
             stmt.setString(6, gender);
 
-            // Handle date conversion properly
+
             if (dob != null && !dob.isEmpty()) {
                 try {
-                    java.sql.Date sqlDob = java.sql.Date.valueOf(dob); // Ensure the format is correct: yyyy-MM-dd
+                    java.sql.Date sqlDob = java.sql.Date.valueOf(dob);
                     stmt.setDate(7, sqlDob);
                 } catch (IllegalArgumentException e) {
                     request.setAttribute("error", "Invalid date format for Date of Birth.");
@@ -65,17 +66,18 @@ public class RegisterServlet extends HttpServlet {
                     return;
                 }
             } else {
-                stmt.setDate(7, null); // If no dob is provided
+                stmt.setDate(7, null);
             }
 
             stmt.setString(8, specialization);
             stmt.setInt(9, (experience != null && !experience.isEmpty()) ? Integer.parseInt(experience) : 0); // Default to 0 if empty or invalid
 
-            // Execute the query
+
             int rowsInserted = stmt.executeUpdate();
 
             if (rowsInserted > 0) {
-                // Redirect to login page after successful registration
+
+                // Redirect to login page
                 response.sendRedirect(request.getContextPath()+"/login");
             } else {
                 // Handle failure in registration

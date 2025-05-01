@@ -10,6 +10,7 @@ import jakarta.servlet.http.*;
 import java.io.*;
 import java.sql.*;
 
+//to edit user profile
 @WebServlet("/edit-profile")
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024,
@@ -28,7 +29,7 @@ public class editProfileServlet extends HttpServlet {
             return;
         }
 
-        // Fetch full user data from DB
+        //To get  user data from th dataabase
         try (Connection conn = DbConnectionUtil.getConnection()) {
             String sql = "SELECT * FROM users WHERE user_id = ?";
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -77,7 +78,6 @@ public class editProfileServlet extends HttpServlet {
 
         int userId = currentUser.getId();
 
-        // Get form fields
         String fullName = request.getParameter("full_name");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
@@ -90,7 +90,7 @@ public class editProfileServlet extends HttpServlet {
             experienceYears = Integer.parseInt(request.getParameter("experience_years"));
         } catch (NumberFormatException ignored) {}
 
-        // Handle file upload
+        // file upload
         byte[] profilePicture = null;
         Part filePart = request.getPart("profile_picture");
 
@@ -104,7 +104,7 @@ public class editProfileServlet extends HttpServlet {
             }
         }
 
-        // Update user in DB
+        // Update user in Database
         try (Connection conn = DbConnectionUtil.getConnection()) {
             String sql;
             PreparedStatement stmt;
@@ -139,7 +139,7 @@ public class editProfileServlet extends HttpServlet {
             int rowsAffected = stmt.executeUpdate();
 
             if (rowsAffected > 0) {
-                // Refresh session user with latest DB data
+                // Refresh session user
                 String fetchSql = "SELECT * FROM users WHERE user_id = ?";
                 try (PreparedStatement fetchStmt = conn.prepareStatement(fetchSql)) {
                     fetchStmt.setInt(1, userId);

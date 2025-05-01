@@ -12,10 +12,11 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <!-- Set source and target Java version -->
-        <maven.compiler.source>17</maven.compiler.source> <!-- Change to Java 17 or 11 -->
+        <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Added JSTL version property -->
+        <jstl.version>2.0.0</jstl.version>
     </properties>
 
     <dependencies>
@@ -39,16 +40,26 @@
             <scope>test</scope>
         </dependency>
 
-
         <!-- JBCrypt Dependency -->
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
         </dependency>
-    </dependencies>
 
-    <build>
+        <!-- Added JSTL Dependencies -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+    </dependencies>    <build>
         <finalName>DoctorMeroSathi</finalName>
     </build>
 </project>

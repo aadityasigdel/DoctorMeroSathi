@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DoctorMeroSathi</title>
-    <link rel="stylesheet" href="./Css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/index.css">
 </head>
 <body>
 
@@ -27,7 +28,6 @@
 <section class="hero">
     <h1 class="hero-title">Quality Healthcare at Your Fingertips</h1>
     <p class="hero-subtitle">Book an appointment with top doctors from the comfort of your home.</p>
-    <a href="/view/bookAppointment.jsp" class="btn">Book Appointment</a>
 </section>
 
 <!-- Features Section -->

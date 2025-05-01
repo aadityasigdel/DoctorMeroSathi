@@ -1,0 +1,115 @@
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+.user-management-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.user-management-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.user-management-table th,
+.user-management-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.user-management-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.user-management-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-management-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.user-management-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.user-management-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.user-management-edit-btn {
+    background-color: #2196F3;
+}
+
+.user-management-edit-btn:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+.user-management-delete-btn {
+    background-color: #f44336;
+}
+
+.user-management-delete-btn:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+}
+
+.user-management-container > div {
+    text-align: center;
+    margin: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+.user-management-btn:hover {
+    opacity: 0.9;
+}
+
+.user-management-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+.user-management-table th, .user-management-table td {
+    padding: 14px 18px;
+}
+
+
+@media (max-width: 768px) {
+    .user-management-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .user-management-table th,
+    .user-management-table td {
+        padding: 10px;
+    }
+
+    .user-management-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

@@ -15,6 +15,40 @@
         <h1>Welcome to <span>Doctor Mero Sathi</span></h1>
         <p>Your trusted partner for medical appointments and health guidance.</p>
     </header>
+    <div style="
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 420px;
+  margin: 24px auto;
+  box-shadow: 0 6px 20px rgba(42, 127, 157, 0.15);
+  transition: transform 0.3s ease;
+">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+            <div style="background: #e0f2ff; padding: 12px; border-radius: 50%; width: 40px; height: 40px;"></div>
+            <h3 style="color: #2A7F9D; font-size: 1.3rem; margin: 0; font-weight: 600;">Need Immediate Help?</h3>
+        </div>
+        <p style="color: #374151; font-size: 1rem; margin-bottom: 18px; line-height: 1.5;">
+            Chat directly with our doctors for <strong>quick medical advice</strong> anytime.
+        </p>
+        <a href="${pageContext.request.contextPath}/chat" style="
+    display: inline-block;
+    background: #2A7F9D;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(42, 127, 157, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+  " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            Chat Now
+        </a>
+    </div>
+
 
     <!-- Search Bar Section -->
     <div class="search-bar">
@@ -28,37 +62,7 @@
     <section class="doctor-section">
         <h2>Available Doctors</h2>
         <div class="doctor-grid">
-            <div class="doctor-card">
-                <div class="doctor-details">
-                    <h3>Dr. Aayush Sharma</h3>
-                    <p>Cardiologist</p>
-                </div>
-                <div class="doctor-actions">
-                    <a href="#" class="view-btn">View Profile</a>
-                    <a href="#" class="book-btn">Book Appointment</a>
-                </div>
-            </div>
 
-            <div class="doctor-card">
-                <div class="doctor-details">
-                    <h3>Dr. Nisha Karki</h3>
-                    <p>Pediatrician</p>
-                </div>
-                <div class="doctor-actions">
-                    <a href="#" class="view-btn">View Profile</a>
-                    <a href="#" class="book-btn">Book Appointment</a>
-                </div>
-            </div>
-
-            <div class="doctor-card">
-                <div class="doctor-details">
-                    <h3>Dr. Ramesh Thapa</h3>
-                    <p>Neurologist</p>
-                </div>
-                <div class="doctor-actions">
-                    <a href="#" class="view-btn">View Profile</a>
-                    <a href="#" class="book-btn">Book Appointment</a>
-                </div>
             </div>
         </div>
     </section>

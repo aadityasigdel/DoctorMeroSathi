@@ -1,150 +1,135 @@
-:root {
-    --primary-blue: #2A7F9D;
-    --accent-coral: #FF8A7D;
-    --light-blue: #E1F0F5;
-    --dark-gray: #333333;
-    --medium-gray: #555555;
-    --light-gray: #f8f9fa;
-    --border-radius: 6px; /* Slightly less rounded */
-    --box-shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
-    --transition-default: all 0.2s ease-in-out;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 20px; /* Add some padding around the body */
-    background-color: var(--light-gray);
-    color: var(--dark-gray);
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333333;
     display: flex;
-    justify-content: center; /* Center the container */
-    align-items: flex-start; /* Align items to the top */
-    min-height: 100vh; /* Ensure full viewport height */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .profile-container {
-    max-width: 700px; /* Slightly narrower */
-    width: 100%;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-light);
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    margin-top: 40px; /* Add some top margin */
-    margin-bottom: 40px; /* Add some bottom margin */
+    padding: 30px;
 }
 
 .profile-header {
-    background-color: var(--primary-blue);
+    background-color: #2A7F9D;
     color: white;
-    padding: 20px; /* Reduced padding */
-    text-align: left; /* Align title to the left */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .profile-header h2 {
     margin: 0;
-    font-size: 1.6rem; /* Slightly smaller title */
-    font-weight: 500; /* Lighter font weight */
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .profile-content {
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
     display: grid;
-    grid-template-columns: auto 1fr; /* Grid layout */
+    grid-template-columns: auto 1fr;
     gap: 20px;
 }
 
 .profile-picture-section {
     text-align: center;
-    padding-top: 10px; /* Adjust top padding */
+    padding-top: 10px;
 }
 
 .profile-picture {
-    width: 120px; /* Smaller profile picture */
+    width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--light-blue);
-    margin-bottom: 15px; /* Reduced margin */
-    box-shadow: var(--box-shadow-light);
+    border: 3px solid #E1F0F5;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .no-picture {
-    width: 120px; /* Smaller no-picture area */
+    width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: var(--light-blue);
+    background-color: #E1F0F5;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px; /* Reduced margin */
-    color: var(--primary-blue);
-    font-size: 2rem; /* Smaller icon */
-}
-
-.profile-details {
-    /* No specific flex anymore */
+    margin-bottom: 15px;
+    color: #2A7F9D;
+    font-size: 2rem;
 }
 
 .detail-card {
-    background-color: white; /* White background for cards */
-    border-radius: var(--border-radius);
-    padding: 15px; /* Reduced padding */
-    margin-bottom: 15px; /* Reduced margin */
-    border: 1px solid #ddd; /* Light border for cards */
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
 }
 
 .detail-card h3 {
-    color: var(--primary-blue);
+    color: #2A7F9D;
     margin-top: 0;
-    margin-bottom: 10px; /* Reduced margin */
-    padding-bottom: 8px; /* Reduced padding */
-    border-bottom: 2px solid var(--accent-coral);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FF8A7D;
     display: flex;
     align-items: center;
-    gap: 8px; /* Reduced gap */
-    font-size: 1.1rem; /* Smaller heading */
+    gap: 8px;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
 .detail-card h3 i {
-    color: var(--accent-coral);
-    font-size: 1rem; /* Smaller icon */
+    color: #FF8A7D;
+    font-size: 1rem;
 }
 
 .detail-row {
     display: grid;
-    grid-template-columns: 120px 1fr; /* Grid for label and value */
+    grid-template-columns: 120px 1fr;
     gap: 8px;
-    margin-bottom: 8px; /* Reduced margin */
-    align-items: center; /* Align label and value vertically */
+    margin-bottom: 8px;
+    align-items: center;
 }
 
 .detail-label {
-    font-weight: 500; /* Slightly lighter */
-    color: var(--medium-gray);
-    font-size: 0.9rem; /* Smaller label */
+    font-weight: 500;
+    color: #555555;
+    font-size: 0.9rem;
 }
 
 .detail-value {
-    font-size: 0.9rem; /* Smaller value */
+    font-size: 0.9rem;
 }
 
 .edit-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* Reduced gap */
-    padding: 8px 16px; /* Reduced padding */
-    background-color: var(--accent-coral);
+    gap: 6px;
+    padding: 8px 16px;
+    background-color: #FF8A7D;
     color: white;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem; /* Smaller font */
-    transition: var(--transition-default);
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
     text-decoration: none;
-    margin-top: 15px; /* Reduced margin */
-    box-shadow: var(--box-shadow-light);
+    margin-top: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .edit-btn:hover {
@@ -155,7 +140,7 @@ body {
 
 @media (max-width: 768px) {
     .profile-content {
-        grid-template-columns: 1fr; /* Stack on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .profile-picture-section {
@@ -163,11 +148,11 @@ body {
     }
 
     .detail-row {
-        grid-template-columns: 1fr; /* Stack label and value */
+        grid-template-columns: 1fr;
         gap: 4px;
     }
 
     .detail-label {
-        font-weight: bold; /* Make label bold on smaller screens */
+        font-weight: bold;
     }
 }

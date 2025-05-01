@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #F5F7FA; /* Light Gray */
+    background-color: #F5F7FA;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,17 +10,17 @@ body {
 }
 
 .signup-container {
-    background-color: #FFFFFF; /* Pure White */
+    background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     overflow: hidden;
     width: 80%;
-    max-width: 950px; /* Adjust as needed */
+    max-width: 950px;
 }
 
 .image-section {
-    flex: 0.4; /* Adjust ratio as needed */
+    flex: 0.4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,22 +28,22 @@ body {
 }
 
 .image-placeholder {
-    border: 1px solid #CCD1D5; /* Slightly darker light gray */
+    border: 1px solid #CCD1D5;
     border-radius: 8px;
     width: 80%;
-    max-width: 400px; /* Adjust max width for image area */
+    max-width: 400px;
     height: auto;
     aspect-ratio: 1 / 1;
-    background-color: #F5F7FA; /* Light Gray */
+    background-color: #F5F7FA;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: #333333; /* Dark Charcoal */
+    color: #333333;
 }
 
 .form-section {
-    flex: 0.5; /* Adjust ratio as needed */
+    flex: 0.5;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -58,33 +58,33 @@ body {
 }
 
 .logo-area img {
-    width: 40px; /* Adjust logo size */
+    width: 40px;
     height: auto;
     margin-bottom: 5px;
 }
 
 .logo-text {
     font-size: 1.2rem;
-    color: #2A7F9D; /* Primary Blue */
+    color: #2A7F9D;
     font-weight: bold;
 }
 
 h1 {
     font-size: 1.8rem;
-    color: #333333; /* Dark Charcoal */
+    color: #333333;
     margin-bottom: 25px;
     font-weight: normal;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 15px; /* Adjust spacing */
+    margin-bottom: 15px;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    color: #333333; /* Dark Charcoal */
+    color: #333333;
     font-size: 0.9rem;
 }
 
@@ -96,15 +96,15 @@ h1 {
 .input-group select {
     width: calc(100% - 40px);
     padding: 10px 10px 10px 35px;
-    border: 1px solid #CCD1D5; /* Slightly darker light gray */
+    border: 1px solid #CCD1D5;
     border-radius: 4px;
     font-size: 1rem;
     box-sizing: border-box;
-    appearance: none; /* Remove default select arrow */
+    appearance: none;
 }
 
 .input-group select {
-    padding-right: 30px; /* Make space for custom arrow if needed */
+    padding-right: 30px;
 }
 
 .input-group .icon {
@@ -112,13 +112,13 @@ h1 {
     left: 10px;
     top: 68%;
     transform: translateY(-50%);
-    color: #A9A9A9; /* Light gray for icons */
+    color: #A9A9A9;
     font-size: 1rem;
 }
 
 button.signup-button {
-    background-color: #FF8A7D; /* Warm Coral */
-    color: #FFFFFF; /* Pure White */
+    background-color: #FF8A7D;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     padding: 12px 20px;
@@ -126,22 +126,22 @@ button.signup-button {
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add some space above the button */
+    margin-top: 20px;
 }
 
 button.signup-button:hover {
-    background-color: #E67A6E; /* Slightly darker coral */
+    background-color: #E67A6E;
 }
 
 .login-link {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9rem;
-    color: #333333; /* Dark Charcoal */
+    color: #333333;
 }
 
 .login-link a {
-    color: #5DB4B8; /* Soft Teal */
+    color: #5DB4B8;
     text-decoration: none;
 }
 

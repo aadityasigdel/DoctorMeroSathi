@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 5rem 1rem;
@@ -102,7 +101,7 @@ body {
     box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
-/* Features Section */
+
 .features {
     padding: 4rem 1rem;
     background: #ffffff;
@@ -151,7 +150,7 @@ body {
     color: #64748b;
 }
 
-/* About Section */
+
 .about {
     padding: 4rem 1rem;
     text-align: center;
@@ -171,7 +170,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 2rem;
