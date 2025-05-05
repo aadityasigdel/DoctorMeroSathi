@@ -10,59 +10,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d486dd19-080c-4e4f-838e-9771e5ebf7f4" name="Changes" comment="3rd push">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AccessDeniedServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ChatServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentsDoc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AdminDashDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AppointmentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/UserProfileDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/filters/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Admindash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/AppointmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/DashboardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/Chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/acessdenied.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/appointmgmt.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/bookApp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Chat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access-denied.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/avatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentsDocServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UpdateAppointmentStatusServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UpdateUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ViewProfileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/updateScheduleServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/ScheduleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/ScheduleModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/DocApp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/editprofile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/userprofile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserProfile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AdmindashServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AdmindashServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentRedirectServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentRedirectServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/DoctorListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/DoctorListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/BookAppServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/BookAppServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentmgrServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentmgrServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/bookApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/BookAppServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UsersMgrServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentmgrServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentMgrServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentsDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/EditUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/editProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/editProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/logoutservlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/logoutservlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/usersMgrServet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UsersMgrServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AdminDashDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AdminDashDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AppointmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AppointmentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/UserProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/UserProfileDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/userdao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/userdao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/Authservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/Authservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/AdminNav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/AdminNav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Admindash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Admindash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/AppointmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Chat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/adminDash.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/adminDash.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/adminUsrMrg.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/adminUsrMrg.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AdminNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AdminNav.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admindash.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admindash.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDash.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDoc.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDoc.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDoc.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookApp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookApp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Chat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access-denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access-denied.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/appointmentmgr.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/appointmentmgr.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/doctorList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/doctorList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usersMgr.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usersMgr.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +64,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="Class" />
         <option value="SCSS File" />
+        <option value="Jsp File" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -142,7 +134,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/drive/OneDrive/Desktop/CourseWork/DoctorMeroSathi/src/main/webapp/assets&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -282,7 +274,17 @@
       <workItem from="1746010614831" duration="2135000" />
       <workItem from="1746062876720" duration="3589000" />
       <workItem from="1746066513343" duration="11502000" />
-      <workItem from="1746080127390" duration="3001000" />
+      <workItem from="1746080127390" duration="3249000" />
+      <workItem from="1746152639101" duration="4042000" />
+      <workItem from="1746156729717" duration="369000" />
+      <workItem from="1746161283633" duration="1181000" />
+      <workItem from="1746171744677" duration="5235000" />
+      <workItem from="1746183607223" duration="3047000" />
+      <workItem from="1746201374348" duration="3425000" />
+      <workItem from="1746283338835" duration="5163000" />
+      <workItem from="1746363842000" duration="9255000" />
+      <workItem from="1746376651167" duration="24000" />
+      <workItem from="1746412946412" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="2nd push">
       <option name="closed" value="true" />
@@ -319,16 +321,5 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="3rd push" />
     <option name="LAST_COMMIT_MESSAGE" value="3rd push" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

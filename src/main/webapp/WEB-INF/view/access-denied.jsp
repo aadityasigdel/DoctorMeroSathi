@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Access Denied</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/Css/acessdenied.css"> <!-- Adjust path as necessary -->
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/Css/acessdenied.css">
 </head>
 <body>
 <div class="container">

@@ -31,18 +31,12 @@ public class DashboardService {
                 dashboard.setTodaysAppointments(-1);
             }
 
-            try {
-                dashboard.setPendingAppointments(adminDashDAO.getPendingAppointmentsCount());
-            } catch (SQLException e) {
-                System.err.println("Error loading pending appointments: " + e.getMessage());
-                dashboard.setPendingAppointments(-1);
-            }
 
             try {
                 dashboard.setRecentAppointments(adminDashDAO.getRecentAppointments(5));
             } catch (SQLException e) {
                 System.err.println("Error loading recent appointments: " + e.getMessage());
-                // Leave recent appointments as null or empty list
+
             }
 
             return dashboard;

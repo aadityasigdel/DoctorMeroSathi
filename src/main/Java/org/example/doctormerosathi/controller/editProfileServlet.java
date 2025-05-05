@@ -29,7 +29,7 @@ public class editProfileServlet extends HttpServlet {
             return;
         }
 
-        //To get  user data from th dataabase
+
         try (Connection conn = DbConnectionUtil.getConnection()) {
             String sql = "SELECT * FROM users WHERE user_id = ?";
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {

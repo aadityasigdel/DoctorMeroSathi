@@ -203,7 +203,7 @@
             </div>
         </div>
         <div class="actions">
-            <form action="doctor-profile" method="get" style="display:inline;">
+            <form action="${pageContext.request.contextPath}/userprofile" method="get" style="display:inline;">
                 <input type="hidden" name="id" value="<%= doctor.getId() %>">
                 <button type="submit" class="btn btn-profile">View Profile</button>
             </form>

@@ -24,6 +24,26 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/view/navbar.jsp" %>
+
+<   <script type="text/javascript">
+    <%
+        String message = (String) session.getAttribute("message");
+        String error = (String) session.getAttribute("error");
+        if (message != null) {
+    %>
+    alert('<%= message %>');
+    <%
+            session.removeAttribute("message");
+        }
+        if (error != null) {
+    %>
+    alert('<%= error %>');
+    <%
+            session.removeAttribute("error");
+        }
+    %>
+</script>
+
 <div class="profile-container">
     <div class="profile-header">
         <h2>My Profile</h2>
@@ -77,6 +97,7 @@
             </div>
 
             <% if ("doctor".equalsIgnoreCase(user.getRole())) { %>
+            <!-- Professional Information Section for Doctors -->
             <div class="detail-card">
                 <h3><i class="fas fa-stethoscope"></i> Professional Information</h3>
                 <div class="detail-row">
@@ -88,6 +109,44 @@
                     <div class="detail-value"><%= user.getExperienceYears() != null ? user.getExperienceYears() + " years" : "N/A" %></div>
                 </div>
             </div>
+
+            <!-- Schedule Update Form for Doctors -->
+            <details class="schedule-details">
+                <summary class="toggle-schedule-btn">
+                    <i class="fas fa-calendar-plus"></i> Add Schedule
+                </summary>
+
+                <!-- Schedule Update Form for Doctors -->
+                <div class="detail-card">
+                    <h3><i class="fas fa-calendar-day"></i> Update Schedule</h3>
+                    <form action="<%= request.getContextPath() %>/updateSchedule" method="post">
+                        <div class="schedule-input">
+                            <label for="days">Select Days:</label>
+                            <select name="days" id="days" multiple size="7">
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                            </select>
+                        </div>
+                        <div class="schedule-input">
+                            <label for="startTime">Start Time:</label>
+                            <input type="time" id="startTime" name="startTime" required>
+                        </div>
+                        <div class="schedule-input">
+                            <label for="endTime">End Time:</label>
+                            <input type="time" id="endTime" name="endTime" required>
+                        </div>
+                        <button type="submit" class="update-schedule-btn">
+                            <i class="fas fa-check"></i> Update Schedule
+                        </button>
+                    </form>
+                </div>
+            </details>
+
             <% } %>
 
             <div class="detail-card">
@@ -104,6 +163,7 @@
                     <i class="fas fa-edit"></i> Edit Profile
                 </button>
             </form>
+
         </div>
     </div>
 </div>

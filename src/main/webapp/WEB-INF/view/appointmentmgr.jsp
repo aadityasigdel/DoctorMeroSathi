@@ -18,10 +18,17 @@
 <div class="appointment-container">
     <h2>Appointment Management</h2>
 
+    <!-- Display Success Message -->
     <c:if test="${not empty successMessage}">
         <div class="alert alert-success">${successMessage}</div>
     </c:if>
 
+    <!-- Display Error Message -->
+    <c:if test="${not empty errorMessage}">
+        <div class="alert alert-danger">${errorMessage}</div>
+    </c:if>
+
+    <!-- Check if there are any appointments -->
     <c:choose>
         <c:when test="${not empty appointments and appointments.size() > 0}">
             <table class="appointment-table">
@@ -44,7 +51,10 @@
                         <td>${appointment.appointmentDatetime}</td>
                         <td>${appointment.status}</td>
                         <td class="actions">
+                            <!-- Edit Button -->
                             <a href="editAppointment.jsp?id=${appointment.id}" class="btn edit-btn">Edit</a>
+
+                            <!-- Delete Button -->
                             <form method="post" action="${pageContext.request.contextPath}/admin/appointmentmgr" style="display:inline;">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id" value="${appointment.id}">

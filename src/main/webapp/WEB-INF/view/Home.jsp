@@ -1,3 +1,12 @@
+<%@ page import="org.example.doctormerosathi.model.UsersModel" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Base64" %><%--
+  Created by IntelliJ IDEA.
+  User: acer
+  Date: 4/24/2025
+  Time: 1:08 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +18,9 @@
 
 <body>
 <%@ include file="/WEB-INF/view/navbar.jsp" %>
+<%
+List<UsersModel> contacts = (List<UsersModel>) request.getAttribute("contacts");
+    %>
 <div class="homepage-wrapper">
     <!-- Hero Section -->
     <header class="hero">
@@ -62,9 +74,36 @@
     <section class="doctor-section">
         <h2>Available Doctors</h2>
         <div class="doctor-grid">
+            <div class="contacts-sidebar">
+                <div class="chat-header">Chats</div>
+                <% if (contacts != null) {
+                    for (UsersModel contact : contacts) {
+                        byte[] pic = contact.getProfilePicture();
+                        String encodedImage = null;
+                        if (pic != null) {
+                            encodedImage = Base64.getEncoder().encodeToString(pic);
+                        }
+                %>
+                <form method="get" action="<%= request.getContextPath() %>/chat">
+                    <input type="hidden" name="receiver_id" value="<%= contact.getId() %>">
+                    <button type="submit" class="contact">
+                        <div class="contact-avatar">
+                            <img src="<%= (encodedImage != null)
+                                ? "data:image/jpeg;base64," + encodedImage
+                                : (request.getContextPath() + "/assets/avatar.jpg") %>"
+                            />
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name"><%= contact.getFullName() %></div>
 
+                        </div>
+                    </button>
+                </form>
+                <% } } %>
             </div>
+
         </div>
+
     </section>
 </div>
 

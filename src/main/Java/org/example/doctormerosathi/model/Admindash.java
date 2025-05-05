@@ -19,10 +19,6 @@ public class Admindash {
     public int getTodaysAppointments() { return todaysAppointments; }
     public void setTodaysAppointments(int getTodaysAppointments) {
     }
-
-    public int getPendingAppointments() { return pendingAppointments; }
-    public void setPendingAppointments(int pendingAppointments) { this.pendingAppointments = pendingAppointments; }
-
     public List<Appointment> getRecentAppointments() { return recentAppointments; }
     public void setRecentAppointments(List<Appointment> recentAppointments) { this.recentAppointments = recentAppointments; }
 }

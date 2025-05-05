@@ -12,7 +12,19 @@ public class UserService {
     }
 
     public List<UsersModel> getAllUsers() {
-        List<UsersModel> users = userDao.getAllUsers();
-        return users;
+        return userDao.getAllUsers();
     }
+
+
+    public void updateUser(int userId, String fullName, String email, String role) {
+        userDao.updateUser(userId, fullName, email, role);
+    }
+
+    public UsersModel getUserById(int userId) {
+        return userDao.getUserById(userId);
+    }
+
+
+
+
 }

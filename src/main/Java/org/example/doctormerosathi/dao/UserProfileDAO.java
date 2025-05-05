@@ -16,30 +16,6 @@ public class UserProfileDAO {
     public static final String SELECT_USER_BY_EMAIL = "SELECT * FROM users WHERE email = ?";
     public static final String SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
 
-    // Register a new user
-    public static int registerUser(UsersModel user) {
-        try (Connection connection = DbConnectionUtil.getConnection();
-             PreparedStatement ps = connection.prepareStatement(INSERT_USER, PreparedStatement.RETURN_GENERATED_KEYS);) {
-            ps.setString(1, user.getFullName());
-            ps.setString(2, user.getEmail());
-            ps.setString(3, user.getPasswordHash());
-            ps.setString(4, user.getRole());
-            ps.setBytes(5, user.getProfilePicture());
-
-            int rows = ps.executeUpdate();
-
-            if (rows > 0) {
-                ResultSet generatedKeys = ps.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    return generatedKeys.getInt(1);
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Error registering user: " + e.getMessage());
-            throw new RuntimeException(e);
-        }
-        return -1;
-    }
 
     // Get a user by email
     public static UsersModel getUserByEmail(String email) {

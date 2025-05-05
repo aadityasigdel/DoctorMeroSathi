@@ -138,6 +138,91 @@ body {
     box-shadow: 0 3px 8px rgba(255, 138, 125, 0.2);
 }
 
+.schedule-form {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.schedule-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.schedule-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-input label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.schedule-input select,
+.schedule-input input[type="time"] {
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.schedule-input select:focus,
+.schedule-input input[type="time"]:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #fff;
+}
+
+.schedule-input select[multiple] {
+    height: 180px;
+}
+
+.schedule-input small {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.update-schedule-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.update-schedule-btn:hover {
+    background: linear-gradient(to right, #2980b9, #2471a3);
+}
+.toggle-schedule-btn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2ecc71;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+}
+
+.toggle-schedule-btn:hover {
+    color: #27ae60;
+}
+
 @media (max-width: 768px) {
     .profile-content {
         grid-template-columns: 1fr;

@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: acer
+  Date: 4/24/2025
+  Time: 1:08 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -5,13 +12,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Appointment - Doctor Mero Sathi</title>
-
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/bookApp.css">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/bookApp.css">
 </head>
 <body>
 <div class="header-area">
-
     <h1>Doctor Mero Sathi</h1>
     <h2>Book Appointment with Doctor</h2>
 </div>
@@ -36,6 +40,13 @@
         <input type="date" id="appointment_date" name="appointment_date" required>
         <span class="calendar-icon">&#128197;</span>
     </div>
+
+    <!-- New Appointment Time Field -->
+    <div class="form-group">
+        <label for="appointment_time">Appointment Time</label>
+        <input type="time" id="appointment_time" name="appointment_time" required>
+    </div>
+
     <div class="form-group">
         <label for="symptoms">Symptoms / Notes</label>
         <textarea id="symptoms" name="symptoms" rows="4"

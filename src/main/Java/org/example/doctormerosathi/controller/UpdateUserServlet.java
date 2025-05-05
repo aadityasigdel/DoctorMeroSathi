@@ -9,23 +9,17 @@ import java.io.IOException;
 import java.util.List;
 
 
-//To get user list for admin to operate on
+//To get user list for admin and provide edit function
 @WebServlet("/admin/usersmgr")
-public class UsersMgrServlet extends HttpServlet {
+public class UpdateUserServlet extends HttpServlet {
     private UserService userService = new UserService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-
-        try {
-            List<UsersModel> users = userService.getAllUsers();
-
-            request.setAttribute("users", users);
-            request.getRequestDispatcher("/WEB-INF/view/usersMgr.jsp").forward(request, response);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        List<UsersModel> users = userService.getAllUsers();
+        request.setAttribute("users", users);
+        request.getRequestDispatcher("/WEB-INF/view/usersMgr.jsp").forward(request, response);
     }
+
+
 }

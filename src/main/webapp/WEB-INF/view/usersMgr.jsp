@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: acer
+  Date: 4/24/2025
+  Time: 1:08 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -30,11 +37,9 @@
                         <td>${not empty user.email ? user.email : 'N/A'}</td>
                         <td>${not empty user.role ? user.role : 'N/A'}</td>
                         <td class="user-management-actions">
-                            <a href="editUser.jsp?id=${user.id}" class="user-management-btn user-management-edit-btn">Edit</a>
-                            <form method="post" action="deleteUser" style="display:inline;">
-                                <input type="hidden" name="id" value="${user.id}">
-                                <button type="submit" class="user-management-btn user-management-delete-btn">Delete</button>
-                            </form>
+
+                            <a href="${pageContext.request.contextPath}/admin/editUser?id=${user.id}" class="user-management-btn user-management-edit-btn">Edit</a>
+
                         </td>
                     </tr>
                 </c:forEach>
@@ -42,9 +47,7 @@
             </table>
         </c:when>
         <c:otherwise>
-            <div >
-                No users found in database
-            </div>
+            <div>No users found in the database</div>
         </c:otherwise>
     </c:choose>
 </div>
