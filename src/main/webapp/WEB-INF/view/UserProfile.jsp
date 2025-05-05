@@ -71,7 +71,30 @@
             </c:if>
         </div>
     </div>
+    <form action="submitReview" method="post">
+        <input type="hidden" name="appointmentId" value="${appointmentId}" />
+        <input type="hidden" name="doctorId" value="${doctor.id}" />
+        <label>Rating:</label>
+        <select name="rating" required>
+            <c:forEach var="i" begin="1" end="5">
+                <option value="${i}">${i}</option>
+            </c:forEach>
+        </select>
+        <textarea name="review" required placeholder="Write your review..."></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+    <h3>Reviews</h3>
+    <c:forEach var="r" items="${reviews}">
+        <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+            <strong>${r.userName}</strong> rated <strong>${r.rating}/5</strong><br>
+            <p>${r.review}</p>
+            <small>${r.createdAt}</small>
+        </div>
+    </c:forEach>
 
+    <c:if test="${empty reviews}">
+        <p>No reviews yet.</p>
+    </c:if>
 </div>
 
 </body>

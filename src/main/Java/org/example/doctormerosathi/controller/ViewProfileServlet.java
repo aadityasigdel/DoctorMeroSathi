@@ -4,25 +4,21 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.example.doctormerosathi.Util.DbConnectionUtil;
+import org.example.doctormerosathi.model.Review;
 import org.example.doctormerosathi.model.UsersModel;
-import org.example.doctormerosathi.model.ScheduleModel;  // Assuming you have a ScheduleModel class
-import org.example.doctormerosathi.services.Authservice;
+import org.example.doctormerosathi.model.ScheduleModel;
 
 import java.io.IOException;
 import java.sql.*;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/userprofile")
 public class ViewProfileServlet extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Get the doctorId from the query parameter
         String doctorIdParam = request.getParameter("id");
 
         if (doctorIdParam == null) {
@@ -34,22 +30,22 @@ public class ViewProfileServlet extends HttpServlet {
             int doctorId = Integer.parseInt(doctorIdParam);
 
             UsersModel doctor = getDoctorById(doctorId);
-            List<ScheduleModel> schedule = getDoctorSchedule(doctorId); // Get the schedule for the doctor
+            List<ScheduleModel> schedule = getDoctorSchedule(doctorId);
+            List<Review> reviews = getDoctorReviews(doctorId);
 
             if (doctor != null) {
                 request.setAttribute("doctor", doctor);
-                request.setAttribute("schedule", schedule);  // Add the schedule to the request
+                request.setAttribute("schedule", schedule);
+                request.setAttribute("reviews", reviews);
                 request.getRequestDispatcher("/WEB-INF/view/UserProfile.jsp").forward(request, response);
             } else {
                 response.sendError(HttpServletResponse.SC_NOT_FOUND, "Doctor not found.");
             }
-
         } catch (NumberFormatException e) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Doctor ID.");
         }
     }
 
-    // Method to fetch doctor data from DB
     private UsersModel getDoctorById(int doctorId) {
         UsersModel doctor = null;
         try (Connection conn = DbConnectionUtil.getConnection()) {
@@ -63,7 +59,7 @@ public class ViewProfileServlet extends HttpServlet {
                         doctor.setFullName(rs.getString("full_name"));
                         doctor.setSpecialization(rs.getString("specialization"));
                         doctor.setProfilePicture(rs.getBytes("profile_picture"));
-                        doctor.setExperienceYears(rs.getObject("experience_years") != null ? rs.getInt("experience_years") : null);
+                        doctor.setExperienceYears(rs.getInt("experience_years"));
                     }
                 }
             }
@@ -73,7 +69,6 @@ public class ViewProfileServlet extends HttpServlet {
         return doctor;
     }
 
-    // Method to fetch doctor's schedule from DB
     private List<ScheduleModel> getDoctorSchedule(int doctorId) {
         List<ScheduleModel> scheduleList = new ArrayList<>();
         try (Connection conn = DbConnectionUtil.getConnection()) {
@@ -94,5 +89,37 @@ public class ViewProfileServlet extends HttpServlet {
             e.printStackTrace();
         }
         return scheduleList;
+    }
+
+    private List<Review> getDoctorReviews(int doctorId) {
+        List<Review> reviews = new ArrayList<>();
+        try (Connection conn = DbConnectionUtil.getConnection()) {
+            String sql = """
+                SELECT r.review_id, r.user_id, r.doctor_id, r.rating, r.review, r.created_at, u.full_name
+                FROM reviews r
+                JOIN users u ON r.user_id = u.user_id
+                WHERE r.doctor_id = ?
+                ORDER BY r.created_at DESC
+            """;
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setInt(1, doctorId);
+                try (ResultSet rs = stmt.executeQuery()) {
+                    while (rs.next()) {
+                        Review review = new Review();
+                        review.setReviewId(rs.getInt("review_id"));
+                        review.setUserId(rs.getInt("user_id"));
+                        review.setDoctorId(rs.getInt("doctor_id"));
+                        review.setRating(rs.getInt("rating"));
+                        review.setReview(rs.getString("review"));
+                        review.setCreatedAt(rs.getTimestamp("created_at"));
+                        review.setUserName(rs.getString("full_name"));
+                        reviews.add(review);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return reviews;
     }
 }

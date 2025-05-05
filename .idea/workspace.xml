@@ -10,51 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d486dd19-080c-4e4f-838e-9771e5ebf7f4" name="Changes" comment="3rd push">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentsDocServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UpdateAppointmentStatusServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UpdateUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ViewProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/updateScheduleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/ScheduleDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/ScheduleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/DocApp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/editprofile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Css/userprofile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserProfile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/editUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/SubmitReviewServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/BookAppServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/BookAppServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/UsersMgrServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentmgrServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/AppointmentMgrServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/appointmentsDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/EditUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/editProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/editProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AdminDashDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AdminDashDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AppointmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/AppointmentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/UserProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/UserProfileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/userdao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/dao/userdao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Admindash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Admindash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/AppointmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/DashboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/adminDash.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/adminDash.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AdminNav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AdminNav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admindash.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Admindash.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDoc.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/AppointmentDoc.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookApp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/BookApp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Chat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/Profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/SignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access-denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/access-denied.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/appointmentmgr.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/appointmentmgr.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/doctorList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/doctorList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usersMgr.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usersMgr.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ViewProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/controller/ViewProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/org/example/doctormerosathi/model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/userprofile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/userprofile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/UserProfile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +28,8 @@
       <list>
         <option value="SCSS File" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -284,7 +246,8 @@
       <workItem from="1746283338835" duration="5163000" />
       <workItem from="1746363842000" duration="9255000" />
       <workItem from="1746376651167" duration="24000" />
-      <workItem from="1746412946412" duration="3091000" />
+      <workItem from="1746412946412" duration="4506000" />
+      <workItem from="1746432804059" duration="1275000" />
     </task>
     <task id="LOCAL-00001" summary="2nd push">
       <option name="closed" value="true" />
@@ -310,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745236248611</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3rd push">
+      <option name="closed" value="true" />
+      <created>1746416269889</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746416269889</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

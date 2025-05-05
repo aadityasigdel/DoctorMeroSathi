@@ -1,49 +1,34 @@
 package org.example.doctormerosathi.model;
 
+import java.sql.Timestamp;
+
 public class Review {
-    private int id;
-    private int appointmentId;
+    private int reviewId;
+    private int userId;
+    private int doctorId;
     private int rating;
     private String review;
-    private java.sql.Timestamp createdAt;
+    private Timestamp createdAt;
+    private String userName; // For display
 
-    public int getId() {
-        return id;
-    }
+    public int getReviewId() { return reviewId; }
+    public void setReviewId(int reviewId) { this.reviewId = reviewId; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public int getUserId() { return userId; }
+    public void setUserId(int userId) { this.userId = userId; }
 
-    public int getAppointmentId() {
-        return appointmentId;
-    }
+    public int getDoctorId() { return doctorId; }
+    public void setDoctorId(int doctorId) { this.doctorId = doctorId; }
 
-    public void setAppointmentId(int appointmentId) {
-        this.appointmentId = appointmentId;
-    }
+    public int getRating() { return rating; }
+    public void setRating(int rating) { this.rating = rating; }
 
-    public int getRating() {
-        return rating;
-    }
+    public String getReview() { return review; }
+    public void setReview(String review) { this.review = review; }
 
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+    public Timestamp getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Timestamp createdAt) { this.createdAt = createdAt; }
 
-    public String getReview() {
-        return review;
-    }
-
-    public void setReview(String review) {
-        this.review = review;
-    }
-
-    public java.sql.Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(java.sql.Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
+    public String getUserName() { return userName; }
+    public void setUserName(String userName) { this.userName = userName; }
 }

@@ -45,13 +45,17 @@ CREATE TABLE appointments (
     FOREIGN KEY (cancelled_by) REFERENCES users(user_id) );
 
 -- reviews TABLE 
-CREATE TABLE reviews ( 
-    review_id INT AUTO_INCREMENT PRIMARY KEY, 
-    user_id INT NOT NULL, 
-    rating INT CHECK (rating BETWEEN 1 AND 5), 
-    review TEXT, 
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
-    FOREIGN KEY (user_id) REFERENCES users(user_id) );
+CREATE TABLE reviews (
+review_id INT AUTO_INCREMENT PRIMARY KEY,
+user_id INT NOT NULL,
+doctor_id INT NOT NULL,
+rating INT CHECK (rating BETWEEN 1 AND 5),
+review TEXT,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (user_id) REFERENCES users(user_id),
+FOREIGN KEY (doctor_id) REFERENCES users(user_id)
+);
+
 
 -- messages TABLE 
 CREATE TABLE messages (
