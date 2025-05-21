@@ -70,15 +70,14 @@ public class RegisterServlet extends HttpServlet {
             }
 
             stmt.setString(8, specialization);
-            stmt.setInt(9, (experience != null && !experience.isEmpty()) ? Integer.parseInt(experience) : 0); // Default to 0 if empty or invalid
-
+            stmt.setInt(9, (experience != null && !experience.isEmpty()) ? Integer.parseInt(experience) : 0);
 
             int rowsInserted = stmt.executeUpdate();
 
             if (rowsInserted > 0) {
 
-                // Redirect to login page
-                response.sendRedirect(request.getContextPath()+"/login");
+                response.sendRedirect(request.getContextPath() + "/login?message=Registration successful. Please login.");
+
             } else {
                 // Handle failure in registration
                 request.setAttribute("error", "An error occurred during registration. Please try again.");

@@ -151,6 +151,50 @@ public class AppointmentDAO {
         }
     }
 
+    public List<Appointment> getAppointmentsByCustomerId(int customerId) {
+        List<Appointment> appointments = new ArrayList<>();
+        String sql = "SELECT a.appointment_id, a.customer_id, a.doctor_id, a.appointment_datetime, " +
+                "a.status, a.reason, a.rescheduled_from, a.cancelled_by, a.cancelled_at, " +
+                "a.cancellation_reason, a.created_at, u.full_name AS doctor_name " +
+                "FROM appointments a " +
+                "JOIN users u ON a.doctor_id = u.user_id " +
+                "WHERE a.customer_id = ?";
+
+        try (Connection conn = DbConnectionUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, customerId);  // Set the customerId as a parameter in the query
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Appointment appointment = new Appointment();
+                appointment.setId(rs.getInt("appointment_id"));
+                appointment.setCustomerId(rs.getInt("customer_id"));
+                appointment.setDoctorId(rs.getInt("doctor_id"));
+                appointment.setAppointmentDatetime(rs.getTimestamp("appointment_datetime"));
+                appointment.setStatus(rs.getString("status"));
+                appointment.setReason(rs.getString("reason"));
+                appointment.setRescheduledFrom(rs.getInt("rescheduled_from"));
+                if (rs.wasNull()) appointment.setRescheduledFrom(null);
+                appointment.setCancelledBy(rs.getInt("cancelled_by"));
+                appointment.setCancelledAt(rs.getTimestamp("cancelled_at"));
+                appointment.setCancellationReason(rs.getString("cancellation_reason"));
+                appointment.setCreatedAt(rs.getTimestamp("created_at"));
+
+                // Set the doctor's name
+                String doctorName = rs.getString("doctor_name");
+                appointment.setDoctorName(doctorName);
+
+                appointments.add(appointment);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to fetch appointments for customer ID " + customerId, e);
+        }
+        return appointments;
+    }
+
+
+
 
 
 

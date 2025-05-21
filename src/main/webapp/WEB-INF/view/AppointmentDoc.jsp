@@ -12,7 +12,6 @@
 <head>
     <title>My Appointments</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/Css/DocApp.css">
-
 </head>
 <body>
 
@@ -72,7 +71,7 @@
                             </form>
 
                             <!-- Cancel Appointment Form with Reason -->
-                            <form action="${pageContext.request.contextPath}/updateAppointmentStatus" method="post"
+                            <form action="${pageContext.request.contextPath}/appointmentsDoc" method="post"
                                   onsubmit="return confirmCancel()">
                                 <input type="hidden" name="action" value="cancel" />
                                 <input type="hidden" name="appointmentId" value="${appt.id}" />

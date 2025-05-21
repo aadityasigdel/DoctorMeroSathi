@@ -1,4 +1,3 @@
-
 package org.example.doctormerosathi.controller;
 
 import jakarta.servlet.ServletException;
@@ -7,15 +6,10 @@ import jakarta.servlet.http.*;
 import org.example.doctormerosathi.dao.AppointmentDAO;
 import org.example.doctormerosathi.model.UsersModel;
 
-
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 @WebServlet("/BookApp")
 public class BookAppServlet extends HttpServlet {
@@ -54,8 +48,8 @@ public class BookAppServlet extends HttpServlet {
 
         try {
             int doctorId = Integer.parseInt(request.getParameter("doctorId"));
-            String dateStr = request.getParameter("appointment_date");  // from <input type="date">
-            String timeStr = request.getParameter("appointment_time");  // from <input type="time">
+            String dateStr = request.getParameter("appointment_date");
+            String timeStr = request.getParameter("appointment_time");
             String reason = request.getParameter("symptoms");
 
             UsersModel user = (UsersModel) request.getSession().getAttribute("user");
@@ -66,23 +60,20 @@ public class BookAppServlet extends HttpServlet {
 
             Integer customerId = user.getId();
 
-            // Debug log to check values of dateStr and timeStr
-            System.out.println("Appointment Date: " + dateStr);
-            System.out.println("Appointment Time: " + timeStr);
-
+            // Log the appointment details for debugging
+            logger.log(Level.INFO, "Booking appointment for user: {0}, Doctor: {1}, Date: {2}, Time: {3}, Reason: {4}",
+                    new Object[]{customerId, doctorId, dateStr, timeStr, reason});
 
             String appointmentDateTime = dateStr + " " + timeStr + ":00";
 
-
-            System.out.println("Combined Appointment DateTime: " + appointmentDateTime);
+            logger.log(Level.INFO, "Combined Appointment DateTime: " + appointmentDateTime);
 
             Timestamp appointmentTimestamp = Timestamp.valueOf(appointmentDateTime);
-
 
             AppointmentDAO dao = new AppointmentDAO();
             dao.bookAppointment(customerId, doctorId, appointmentTimestamp, reason);
 
-
+            logger.log(Level.INFO, "Appointment booked successfully for user: {0} with doctor: {1}", new Object[]{customerId, doctorId});
             response.sendRedirect(request.getContextPath() + "/appointmentsCli?success=booked");
 
         } catch (Exception e) {
@@ -90,5 +81,4 @@ public class BookAppServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/appointmentsCli?error=booking_failed");
         }
     }
-
 }

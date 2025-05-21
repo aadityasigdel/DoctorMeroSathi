@@ -37,7 +37,7 @@ public class DoctorListServlet extends HttpServlet {
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(SELECT_DOCTORS_SQL)) {
 
-            stmt.setString(1, "doctor"); // Set parameter for role
+            stmt.setString(1, "doctor"); 
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {

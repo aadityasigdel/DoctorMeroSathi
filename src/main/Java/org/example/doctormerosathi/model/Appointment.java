@@ -12,14 +12,23 @@ public class Appointment {
     private java.sql.Timestamp cancelledAt;
     private String cancellationReason;
     private java.sql.Timestamp createdAt;
+    private String doctorName;
 
     public int getId() {
         return id;
     }
 
+
     public void setId(int id) {
         this.id = id;
     }
+    public String getDoctorName() {
+        return doctorName;
+    }
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
 
     public int getCustomerId() {
         return customerId;

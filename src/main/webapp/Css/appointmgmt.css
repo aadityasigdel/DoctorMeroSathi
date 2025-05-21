@@ -70,6 +70,23 @@ body{
     gap: 8px;
     flex-wrap: wrap;
 }
+.subApp {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    background-color: #2D9CDB;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 .btn {
     padding: 8px 12px;

@@ -1,12 +1,8 @@
 <%@ page import="org.example.doctormerosathi.model.UsersModel" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Base64" %><%--
-  Created by IntelliJ IDEA.
-  User: acer
-  Date: 4/24/2025
-  Time: 1:08 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.Base64" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <!-- Adding the JSTL taglib -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +14,7 @@
 
 <body>
 <%@ include file="/WEB-INF/view/navbar.jsp" %>
-<%
-List<UsersModel> contacts = (List<UsersModel>) request.getAttribute("contacts");
-    %>
+
 <div class="homepage-wrapper">
     <!-- Hero Section -->
     <header class="hero">
@@ -28,16 +22,15 @@ List<UsersModel> contacts = (List<UsersModel>) request.getAttribute("contacts");
         <p>Your trusted partner for medical appointments and health guidance.</p>
     </header>
     <div style="
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
-  border: 1px solid #c7d2fe;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 420px;
-  margin: 24px auto;
-  box-shadow: 0 6px 20px rgba(42, 127, 157, 0.15);
-  transition: transform 0.3s ease;
-">
+        font-family: 'Segoe UI', sans-serif;
+        background: #ffffff;
+        border: 1px solid #c7d2fe;
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 420px;
+        margin: 24px auto;
+        box-shadow: 0 6px 20px rgba(42, 127, 157, 0.15);
+        transition: transform 0.3s ease;">
         <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
             <div style="background: #e0f2ff; padding: 12px; border-radius: 50%; width: 40px; height: 40px;"></div>
             <h3 style="color: #2A7F9D; font-size: 1.3rem; margin: 0; font-weight: 600;">Need Immediate Help?</h3>
@@ -46,21 +39,20 @@ List<UsersModel> contacts = (List<UsersModel>) request.getAttribute("contacts");
             Chat directly with our doctors for <strong>quick medical advice</strong> anytime.
         </p>
         <a href="${pageContext.request.contextPath}/chat" style="
-    display: inline-block;
-    background: #2A7F9D;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    box-shadow: 0 4px 12px rgba(42, 127, 157, 0.3);
-    transition: background 0.3s ease, transform 0.2s ease;
-  " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            display: inline-block;
+            background: #2A7F9D;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(42, 127, 157, 0.3);
+            transition: background 0.3s ease, transform 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
             Chat Now
         </a>
     </div>
-
 
     <!-- Search Bar Section -->
     <div class="search-bar">
@@ -70,41 +62,20 @@ List<UsersModel> contacts = (List<UsersModel>) request.getAttribute("contacts");
         </form>
     </div>
 
-    <!-- Doctor Cards Section -->
-    <section class="doctor-section">
-        <h2>Available Doctors</h2>
-        <div class="doctor-grid">
-            <div class="contacts-sidebar">
-                <div class="chat-header">Chats</div>
-                <% if (contacts != null) {
-                    for (UsersModel contact : contacts) {
-                        byte[] pic = contact.getProfilePicture();
-                        String encodedImage = null;
-                        if (pic != null) {
-                            encodedImage = Base64.getEncoder().encodeToString(pic);
-                        }
-                %>
-                <form method="get" action="<%= request.getContextPath() %>/chat">
-                    <input type="hidden" name="receiver_id" value="<%= contact.getId() %>">
-                    <button type="submit" class="contact">
-                        <div class="contact-avatar">
-                            <img src="<%= (encodedImage != null)
-                                ? "data:image/jpeg;base64," + encodedImage
-                                : (request.getContextPath() + "/assets/avatar.jpg") %>"
-                            />
-                        </div>
-                        <div class="contact-info">
-                            <div class="contact-name"><%= contact.getFullName() %></div>
+    <!-- Doctors Section -->
+    <div class="container">
+        <h1>Available Doctors</h1>
 
-                        </div>
-                    </button>
-                </form>
-                <% } } %>
+        <!-- Loop through doctors list with JSTL -->
+        <c:forEach var="doctor" items="${doctors}">
+            <div class="doctor-box" style="border: 1px solid #ccc; padding: 16px; margin-bottom: 12px; border-radius: 8px;">
+                <div class="doctor-name" style="font-size: 1.2em; font-weight: bold;">${doctor.fullName}</div>
+                <div class="doctor-detail"><strong>Specialization:</strong> ${doctor.specialization}</div>
+                <div class="doctor-detail"><strong>ID:</strong> ${doctor.id}</div>
             </div>
+        </c:forEach>
 
-        </div>
-
-    </section>
+    </div>
 </div>
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

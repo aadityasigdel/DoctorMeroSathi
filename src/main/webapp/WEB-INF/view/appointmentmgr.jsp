@@ -15,9 +15,12 @@
 </head>
 <body>
 <jsp:include page="AdminNav.jsp" />
+
 <div class="appointment-container">
     <h2>Appointment Management</h2>
-
+    <form action="${pageContext.request.contextPath}/addApointment" method="get">
+        <button class = "subApp" type="submit">Add New Appointment</button>
+    </form>
     <!-- Display Success Message -->
     <c:if test="${not empty successMessage}">
         <div class="alert alert-success">${successMessage}</div>
@@ -71,5 +74,7 @@
         </c:otherwise>
     </c:choose>
 </div>
+
+
 </body>
 </html>

@@ -177,12 +177,28 @@
         .see-more:hover {
             background-color: #4CA3A7;
         }
+
+        .btn-appointment {
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+            display: inline-block;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+
     </style>
 </head>
 <body>
 <%@ include file="/WEB-INF/view/navbar.jsp" %>
 
 <div class="container">
+    <a href="${pageContext.request.contextPath}/ViewAppointments" class="btn btn-appointment">View Appointment</a>
     <form class="search-form">
         <input type="text" placeholder="Search doctors..." name="search">
         <button type="submit">Search</button>
